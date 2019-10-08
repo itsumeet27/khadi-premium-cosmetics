@@ -45,7 +45,7 @@
 		if(isset($_GET['filter'])){
 			$filter = $_GET['filter'];
 			global $db;
-			$get_category = "SELECT p.id, p.title, p.price, p.image, p.short_desc, p.weight FROM products p INNER JOIN categories c WHERE c.category = '$filter' AND deleted = 0 and featured = 0 AND beauty_regime = 0";
+			$get_category = "SELECT * FROM products WHERE cat_name = '$filter' AND deleted = 0 and featured = 0";
 			$run_category = mysqli_query($db, $get_category);
 			while ($row_category = mysqli_fetch_array($run_category)) {
 				$product_id = $row_category['id'];
