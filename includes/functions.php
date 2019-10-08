@@ -27,6 +27,128 @@
 	}
 ?>
 
+<?php 
+	//Category filter
+	function getCategoryFilter(){
+		global $db;
+		$get_cat = "SELECT * FROM categories WHERE parent = 0";
+		$run_cat = mysqli_query($db, $get_cat);
+
+		while ($row_cat = mysqli_fetch_array($run_cat)) {
+			$category_id = $row_cat['id'];
+			$filter_category = $row_cat['category'];
+			echo "<tr><td class='px-2 py-1'><a href='products.php?filter=$filter_category'>$filter_category</a></td></tr>";		
+		}
+	}
+
+	function getFilteredCategories(){
+		if(isset($_GET['filter'])){
+			$filter = $_GET['filter'];
+			global $db;
+			$get_category = "SELECT p.id, p.title, p.price, p.image, p.short_desc, p.weight FROM products p INNER JOIN categories c WHERE c.category = '$filter' AND deleted = 0 and featured = 0 AND beauty_regime = 0";
+			$run_category = mysqli_query($db, $get_category);
+			while ($row_category = mysqli_fetch_array($run_category)) {
+				$product_id = $row_category['id'];
+				$product_image = $row_category['image'];
+				$product_title = $row_category['title'];
+				$product_weight = $row_category['weight'];
+				$product_price = $row_category['price'];
+				$product_short_desc = $row_category['short_desc'];
+				$photos = explode(',',$product_image);
+
+				echo 
+					"
+						<div class='col-lg-3 col-md-3 col-sm-6 col-xs-12 mb-lg-0 mb-4'>
+							<div class='card card-cascade wider card-ecommerce'>
+					            <div class='view zoom view-cascade overlay'>
+					            	<img src='$photos[0]' class='card-img-top img-fluid' alt='$product_title'>
+					              	<button onclick='detailsmodal($product_id)' style='background: none;border: none;cursor: pointer'>
+					              		<div class='mask rgba-white-slight'></div>
+					              	</button>
+					            </div>
+            					<div class='card-body card-body-cascade text-center'>
+                  					<h5>
+					                    <strong>
+					                        <button onclick='detailsmodal($product_id)' style='background: none;border: none;cursor: pointer'><b>$product_title</b></button>
+					                        <br>
+					                            <span class='badge badge-pill my-2 z-depth-0' style='background-color: #6b5523'>&#8377; $product_price</span>
+						                			&nbsp;&nbsp;&nbsp;
+						                		<span class='badge badge-pill my-2 z-depth-0' style='background-color: #6b5523'>$product_weight</span>
+					                        
+					                    </strong>
+					                </h5>
+                  					<h6 class=''>$product_short_desc</h6>
+              					</div>
+              					<div class='card-footer px-1 px-3 py-3' style='background: #f1e1b3'>
+				                    <span class='float-left'>
+							    		<button onclick='detailsmodal($product_id)' style='margin: 0;cursor: pointer;border:none;background: #6b5523;border-radius: 10em;' class='btn btn-md white-text' title='Quick View'>Quick View</button>
+							    	</span>
+						            <span class='float-right'>
+						            	<a href='description.php?pro_id=$product_id' style='margin: 0;cursor: pointer;border:none;background: #6b5523;border-radius: 10em;' class='btn btn-md white-text' title='Add to Cart'>Add to Cart &nbsp;<i class='fa fa-cart-plus'></i></a>
+						            </span>
+                				</div>
+          					</div>  
+         					<br>        
+						</div>			
+					";
+			}
+		}
+	}
+
+	function getProducts(){
+		if(!isset($_GET['filter'])){
+			global $db;
+			$sql = "SELECT * FROM products WHERE deleted=0 AND beauty_regime = 0 AND featured = 0";
+  			$products = $db->query($sql);
+  			while ($product = mysqli_fetch_array($products)) {
+				$id = $product['id'];
+				$image = $product['image'];
+				$title = $product['title'];
+				$weight = $product['weight'];
+				$price = $product['price'];
+				$short_desc = $product['short_desc'];
+				$photos = explode(',',$image);
+
+				echo 
+					"
+						<div class='col-lg-3 col-md-3 col-sm-6 col-xs-12 mb-lg-0 mb-4'>
+							<div class='card card-cascade wider card-ecommerce'>
+					            <div class='view zoom view-cascade overlay'>
+					            	<img src='$photos[0]' class='card-img-top img-fluid' alt='$title'>
+					              	<button onclick='detailsmodal($id)' style='background: none;border: none;cursor: pointer'>
+					              		<div class='mask rgba-white-slight'></div>
+					              	</button>
+					            </div>
+            					<div class='card-body card-body-cascade text-center'>
+                  					<h5>
+					                    <strong>
+					                        <button onclick='detailsmodal($id)' style='background: none;border: none;cursor: pointer'><b>$title</b></button>
+					                        <br>
+					                            <span class='badge badge-pill my-2 z-depth-0' style='background-color: #6b5523'>&#8377; $price</span>
+						                			&nbsp;&nbsp;&nbsp;
+						                		<span class='badge badge-pill my-2 z-depth-0' style='background-color: #6b5523'>$weight</span>
+					                        
+					                    </strong>
+					                </h5>
+                  					<h6 class=''>$short_desc</h6>
+              					</div>
+              					<div class='card-footer px-1 px-3 py-3' style='background: #f1e1b3'>
+				                    <span class='float-left'>
+							    		<button onclick='detailsmodal($id)' style='margin: 0;cursor: pointer;border:none;background: #6b5523;border-radius: 10em;' class='btn btn-md white-text' title='Quick View'>Quick View</button>
+							    	</span>
+						            <span class='float-right'>
+						            	<a href='description.php?pro_id=$id' style='margin: 0;cursor: pointer;border:none;background: #6b5523;border-radius: 10em;' class='btn btn-md white-text' title='Add to Cart'>Add to Cart &nbsp;<i class='fa fa-cart-plus'></i></a>
+						            </span>
+                				</div>
+          					</div>  
+         					<br>        
+						</div>			
+					";
+			}
+		}
+	}
+?>
+
 <!-- Skin Car -->
 
 <?php 		
