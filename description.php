@@ -164,7 +164,7 @@ if(isset($_GET['pro_id'])){
 				</div>
 				<br>
 				<div class="card-footer" style="background-color: #c0a567">					
-					<button class="btn" style="border-radius: 10em;background: #6b5523" onclick="add_to_cart();">Add to Cart &nbsp;<span class="fa fa-shopping-cart"></span></button>
+					<button class="btn text-white" style="border-radius: 10em;background: #6b5523" onclick="add_to_cart();">Add to Cart &nbsp;<span class="fa fa-shopping-cart"></span></button>
 					<!-- <a href="index.php?add_cart=<?php echo($id);?>" style="margin: 0;cursor: pointer;border:none;background: #1c2a48;border-radius: 10em;" class="btn btn-md white-text" title="View Product">Add to Cart &nbsp;<i class="fa fa-cart-plus"></i></a> -->
 				</div>
 			</div>

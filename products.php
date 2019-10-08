@@ -31,39 +31,18 @@
 	<!--Products Display-->
 	<div class="container-fluid">
 		<h2 class="text-center h2-responsive px-2 py-3" style="font-family: 'Righteous';color: #6b5523;"><b>Products by Khadi Premium Cosmetics</b></h2>
-		<div class="filters row">
-			<h4 class="h4-responsive text-justify col-md-3">Categories </h4>
-			<table>
-				<?php getCategoryFilter(); ?>
-			</table>
-		</div>
-		<section class="text-center my-5">
-			<form action="" method="post">
-				<input type="radio" name="priceorder" value="lowToHigh">Low to High
-				<input type="radio" name="priceorder" value="highToLow">High to Low
-				
-				<button type="submit" name="search" class="btn btn-default">Search</button>
-				
-			</form>
-
-			<?php 
-				if(isset($_POST['priceorder']) && !empty($_POST['priceorder'])){
-					if ($_POST['priceorder'] == 'lowToHigh'){
-						$sql .= " ORDER BY price ASC";
-						$products = $db->query($sql);
-					} 
-
-					if ($_POST['priceorder'] == 'highToLow'){
-						$sql .= " ORDER BY price DESC";
-						$products = $db->query($sql);
-					} 
-				}
-			?>
-			<div class="row">	
-				<?php getProducts(); ?>
-		      	<?php getFilteredCategories(); ?>
+		<div class="filters row p-3">
+			<div class="col-md-3">
+				<h4 class="h4-responsive text-justify p-2">Categories </h4>
+				<table>
+					<?php getCategoryFilter(); ?>
+				</table>
 			</div>
-		</section>
+		</div>
+		<div class="row">	
+			<?php getProducts(); ?>
+	      	<?php getFilteredCategories(); ?>
+		</div>
 	</div>
 
 <?php include('includes/footer.php');?>
