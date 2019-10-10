@@ -83,7 +83,7 @@
 		}
 		if($_POST){
 			$errors = array();
-			$required = array('title', 'price', 'parent', 'child', 'short_desc', 'long_desc', 'sku', 'weight', 'tagline','stock','cat_name');
+			$required = array('title', 'price', 'parent', 'short_desc', 'long_desc', 'weight', 'tagline','stock','cat_name');
 			$allowed = array('png','jpg','jpeg','gif');
 			$uploadPath = array();
 			$tmpLoc = array();
@@ -235,7 +235,7 @@
 					<td><input type="text" id="tags" name="tags" class="form-control" value="<?=$tags;?>" placeholder="Eg: glycerin antiseptic antbacterial"></td>
 				</tr>
 				<tr>
-					<td><button type="submit" name="add" value="" class="btn" style="background-color: #1c2a48;"><?=((isset($_GET['edit']))?'Edit':'Add');?> Product</button></td>
+					<td><button type="submit" name="add" value="" class="btn text-white" style="background-color: #1c2a48;"><?=((isset($_GET['edit']))?'Edit':'Add');?> Product</button></td>
 				</tr>				
 			</table>
 		</form>

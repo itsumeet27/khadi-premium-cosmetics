@@ -130,7 +130,7 @@
                 </div>
                 <div class="col-md-6">
                   <a class="dropdown-item" href="beauty-regime.php">Beauty Regime</a>
-                  <a class="dropdown-item" href="packages.php">Packages</a>
+                  <a class="dropdown-item" href="gift-packages.php">Gift Packages</a>
                 </div>   
               </div>                         
             </div>

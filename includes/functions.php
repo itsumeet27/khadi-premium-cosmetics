@@ -149,7 +149,7 @@
 	}
 ?>
 
-<!-- Skin Car -->
+<!-- Skin Care -->
 
 <?php 		
 		
@@ -557,7 +557,7 @@
 	}
 ?>
 
-<!-- Skin Car -->
+<!-- Beaty Regime -->
 
 <?php 		
 		
@@ -691,4 +691,63 @@
 			}
 		}
 	}
+?>
+
+<!-- Gift Packages -->
+<?php
+	function getGiftPackages(){
+
+			global $db;
+
+			$get_pro = "SELECT * FROM products WHERE featured = 0 AND deleted = 0 AND beauty_regime = 0 AND cat_name = 'Gift Packages'";
+			$run_pro = mysqli_query($db, $get_pro);
+
+			while ($row_pro = mysqli_fetch_array($run_pro)) {
+					$pro_id = $row_pro['id'];
+					$pro_cat = $row_pro['categories'];
+					$pro_image = $row_pro['image'];
+					$pro_title = $row_pro['title'];
+					$pro_weight = $row_pro['weight'];
+					$pro_price = $row_pro['price'];
+					$pro_short_desc = $row_pro['short_desc'];
+					$photos = explode(',',$pro_image);
+
+					echo 
+					"	
+						<div class='col-lg-3 col-md-3 col-sm-6 col-xs-12 mb-lg-0 mb-4'>
+							<div class='card card-cascade wider card-ecommerce'>
+					            <div class='view zoom view-cascade overlay'>
+					            	<img src='$photos[0]' class='card-img-top img-fluid' alt='$pro_title'>
+					              	<button onclick='detailsmodal($pro_id)' style='background: none;border: none;cursor: pointer'>
+					              		<div class='mask rgba-white-slight'></div>
+					              	</button>
+					            </div>
+            					<div class='card-body card-body-cascade text-center'>
+                  					<h5>
+					                    <strong>
+					                        <button onclick='detailsmodal($pro_id)' style='background: none;border: none;cursor: pointer'><b>$pro_title</b></button>
+					                        <br>
+					                            <span class='badge badge-pill my-2 z-depth-0' style='background-color: #6b5523'>&#8377; $pro_price</span>
+						                			&nbsp;&nbsp;&nbsp;
+						                		<span class='badge badge-pill my-2 z-depth-0' style='background-color: #6b5523'>$pro_weight</span>
+					                        
+					                    </strong>
+					                </h5>
+                  					<h6 class=''>$pro_short_desc</h6>
+              					</div>
+              					<div class='card-footer px-1 px-3 py-3' style='background: #f1e1b3'>
+				                    <span class='float-left'>
+							    		<button onclick='detailsmodal($pro_id)' style='margin: 0;cursor: pointer;border:none;background: #6b5523;border-radius: 10em;' class='btn btn-md white-text' title='Quick View'>Quick View</button>
+							    	</span>
+						            <span class='float-right'>
+						            	<a href='description.php?pro_id=$pro_id' style='margin: 0;cursor: pointer;border:none;background: #6b5523;border-radius: 10em;' class='btn btn-md white-text' title='Add to Cart'>Add to Cart &nbsp;<i class='fa fa-cart-plus'></i></a>
+						            </span>
+                				</div>
+          					</div>  
+         					<br>        
+						</div>
+					";
+			}
+		}
+	
 ?>

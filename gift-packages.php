@@ -17,7 +17,7 @@
             <div class="col-md-10">
               <a href=""><img src="img/Logo.png" class="img-fluid" style="width: 400px;"></a>
               <hr class="hr-light">
-              <h4 class="white-text my-4 h1-responsive" style="font-family: 'Cookie', cursive;">All Products</h4>
+              <h4 class="white-text my-4 h1-responsive" style="font-family: 'Cookie', cursive;">Gift Packages</h4>
             </div>
           </div>
         </div>
@@ -25,18 +25,9 @@
     </div>
 	<!--Products Display-->
 	<div class="container-fluid">
-		<h2 class="text-center h2-responsive px-2 py-3" style="font-family: 'Righteous';color: #6b5523;"><b>Products by Khadi Premium Cosmetics</b></h2>
-		<div class="filters row p-3">
-			<div class="col-md-3">
-				<h4 class="h4-responsive text-justify p-2">Categories </h4>
-				<table>
-					<?php getCategoryFilter(); ?>
-				</table>
-			</div>
-		</div>
+		<h2 class="text-center h2-responsive px-2 py-3" style="font-family: 'Righteous';color: #6b5523;"><b>Gift Packages by Khadi Premium Cosmetics</b></h2>
 		<div class="row">	
-			<?php getProducts(); ?>
-	      	<?php getFilteredCategories(); ?>
+			<?php getGiftPackages(); ?>
 		</div>
 	</div>
 
