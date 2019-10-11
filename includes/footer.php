@@ -52,7 +52,7 @@
             <a href="blog.php">Blog</a>
           </p>
           <p>
-            <a href="index.php#contact">Contact Us</a>
+            <a href="contact.php">Contact Us</a>
           </p>
           <p>
             <a href="products.php">All Products</a>
@@ -76,7 +76,7 @@
             <a href="body-care.php">Body Care</a>
           </p>
           <p>
-            <a href="bath-and-beauty.php">Bath and Beauty</a>
+            <a href="gift-packages.php">Gift Packages</a>
           </p>
         </div>
         <!--/.Second column-->
