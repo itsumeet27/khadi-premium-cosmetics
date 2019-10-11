@@ -55,31 +55,25 @@
     <!-- Section: Products v.3 -->
 <section class="text-center my-5">
 <div class="container-fluid">
-  <div class="row">   
-    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-      <div class="sidebar-nav" style="background: #6b5523;">
-        <div class="navbar navbar-default" role="navigation">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse" style="background: #fff;cursor: pointer;border: none;border-radius: 5px;padding: 0.5em 0.75em">
-              <i class="fas fa-bars" aria-hidden="true"></i>
-            </button>
-            <span class="visible-xs navbar-brand">&nbsp;<b class="text-white">Categories</b></span>
-          </div>
-          <div class="navbar-collapse collapse sidebar-navbar-collapse">
-            <ul class="nav navbar-nav" style="text-align: left;">
-            <li style="padding: 7.5px;"><a href="beauty-regime.php" class="text-white">All Products</a></li>
-            <?php getBeautyCare(); ?>
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div>
+  <div class="sidebar-nav my-3" style="background: #6b5523;">
+    <div class="navbar navbar-default" role="navigation">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse" style="background: #fff;cursor: pointer;border: none;border-radius: 5px;padding: 0.5em 0.75em">
+          <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
+        <span class="visible-xs navbar-brand">&nbsp;<b class="text-white">Categories</b></span>
       </div>
+      <div class="navbar-collapse collapse sidebar-navbar-collapse">
+        <ul class="nav navbar-nav" style="text-align: left;">
+        <li style="padding: 7.5px;"><a href="beauty-regime.php" class="text-white">All Products</a></li>
+        <?php getBeautyCare(); ?>
+        </ul>
+      </div><!--/.nav-collapse -->
     </div>
-    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
-      <div class="row">
-        <?php getBeautyPro(); ?>
-        <?php getCatBeautyPro(); ?> 
-      </div>
-    </div>
+  </div>
+  <div class="row">
+    <?php getBeautyPro(); ?>
+    <?php getCatBeautyPro(); ?> 
   </div>
 </div>
 </section>

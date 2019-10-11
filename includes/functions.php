@@ -37,7 +37,7 @@
 		while ($row_cat = mysqli_fetch_array($run_cat)) {
 			$category_id = $row_cat['id'];
 			$filter_category = $row_cat['category'];
-			echo "<li class='nav-item'><a class='nav-link' href='products.php?filter=$filter_category'>$filter_category</a></li>";		
+			echo "<li class='nav-item'><a class='nav-link text-white' href='products.php?filter=$filter_category'>$filter_category</a></li>";		
 		}
 	}
 
@@ -188,7 +188,7 @@
 
 					echo 
 					"
-						<div class='col-lg-4 col-md-4 col-sm-6 col-xs-12 mb-lg-0 mb-4'>
+						<div class='col-lg-3 col-md-3 col-sm-6 col-xs-12 mb-lg-0 mb-4'>
 							<div class='card card-cascade wider card-ecommerce'>
 					            <div class='view zoom view-cascade overlay'>
 					            	<img src='$photos[0]' class='card-img-top img-fluid' alt='$pro_title'>
@@ -247,7 +247,7 @@
 
 					echo 
 					"
-						<div class='col-lg-4 col-md-4 col-sm-6 col-xs-12 mb-lg-0 mb-4'>
+						<div class='col-lg-3 col-md-3 col-sm-6 col-xs-12 mb-lg-0 mb-4'>
 							<div class='card card-cascade wider card-ecommerce'>
 					            <div class='view zoom view-cascade overlay'>
 					            	<img src='$photos[0]' class='card-img-top img-fluid' alt='$pro_title'>
@@ -324,7 +324,7 @@
 
 					echo 
 					"
-						<div class='col-lg-4 col-md-4 col-sm-6 col-xs-12 mb-lg-0 mb-4'>
+						<div class='col-lg-3 col-md-3 col-sm-6 col-xs-12 mb-lg-0 mb-4'>
 							<div class='card card-cascade wider card-ecommerce'>
 					            <div class='view zoom view-cascade overlay'>
 					            	<img src='$photos[0]' class='card-img-top img-fluid' alt='$pro_title'>
@@ -383,7 +383,7 @@
 
 					echo 
 					"
-						<div class='col-lg-4 col-md-4 col-sm-6 col-xs-12 mb-lg-0 mb-4'>
+						<div class='col-lg-3 col-md-3 col-sm-6 col-xs-12 mb-lg-0 mb-4'>
 							<div class='card card-cascade wider card-ecommerce'>
 					            <div class='view zoom view-cascade overlay'>
 					            	<img src='$photos[0]' class='card-img-top img-fluid' alt='$pro_title'>
@@ -460,7 +460,7 @@
 
 					echo 
 					"
-						<div class='col-lg-4 col-md-4 col-sm-6 col-xs-12 mb-lg-0 mb-4'>
+						<div class='col-lg-3 col-md-3 col-sm-6 col-xs-12 mb-lg-0 mb-4'>
 							<div class='card card-cascade wider card-ecommerce'>
 					            <div class='view zoom view-cascade overlay'>
 					            	<img src='$photos[0]' class='card-img-top img-fluid' alt='$pro_title'>
@@ -519,7 +519,7 @@
 
 					echo 
 					"
-						<div class='col-lg-4 col-md-4 col-sm-6 col-xs-12 mb-lg-0 mb-4'>
+						<div class='col-lg-3 col-md-3 col-sm-6 col-xs-12 mb-lg-0 mb-4'>
 							<div class='card card-cascade wider card-ecommerce'>
 					            <div class='view zoom view-cascade overlay'>
 					            	<img src='$photos[0]' class='card-img-top img-fluid' alt='$pro_title'>
@@ -596,7 +596,7 @@
 
 					echo 
 					"	
-						<div class='col-lg-4 col-md-4 col-sm-6 col-xs-12 mb-lg-0 mb-4'>
+						<div class='col-lg-3 col-md-3 col-sm-6 col-xs-12 mb-lg-0 mb-4'>
 							<div class='card card-cascade wider card-ecommerce'>
 					            <div class='view zoom view-cascade overlay'>
 					            	<img src='$photos[0]' class='card-img-top img-fluid' alt='$pro_title'>
@@ -655,7 +655,7 @@
 
 					echo 
 					"
-						<div class='col-lg-4 col-md-4 col-sm-6 col-xs-12 mb-lg-0 mb-4'>
+						<div class='col-lg-3 col-md-3 col-sm-6 col-xs-12 mb-lg-0 mb-4'>
 							<div class='card card-cascade wider card-ecommerce'>
 					            <div class='view zoom view-cascade overlay'>
 					            	<img src='$photos[0]' class='card-img-top img-fluid' alt='$pro_title'>

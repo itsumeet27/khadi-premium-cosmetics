@@ -15,9 +15,8 @@
         <div class="container-fluid d-flex align-items-center justify-content-center h-100">
           <div class="row d-flex justify-content-center text-center">
             <div class="col-md-10">
-              <a href=""><img src="img/Logo.png" class="img-fluid" style="width: 400px;"></a>
-              <hr class="hr-light">
-              <h4 class="white-text my-4 h1-responsive" style="font-family: 'Cookie', cursive;">All Products</h4>
+              <h2 class="text-center text-white h2-responsive px-2 py-3" style="font-family: 'Righteous';line-height: 1.4em"><b>Products by Khadi Premium Cosmetics</b></h2>
+              <hr class="hr-light" style="width: 150px;border:1px solid #fff;">
             </div>
           </div>
         </div>
@@ -25,32 +24,20 @@
     </div>
 	<!--Products Display-->
 	<div class="container-fluid">
-		<h2 class="text-center h2-responsive px-2 py-3" style="font-family: 'Righteous';color: #6b5523;"><b>Products by Khadi Premium Cosmetics</b></h2>
-		<div class="filters">
-				<!--Navbar-->
-				<nav class="navbar navbar-light light-blue lighten-4 my-3">
-				  <!-- Navbar brand -->
-				  <a class="navbar-brand" href="#">Categories</a>
-
-				  <!-- Collapse button -->
-				  <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
-				    aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i
-				        class="fas fa-bars fa-1x"></i></span></button>
-
-				  <!-- Collapsible content -->
-				  <div class="collapse navbar-collapse" id="navbarSupportedContent1">
-
-				    <!-- Links -->
-				    <ul class='navbar-nav mr-auto'>
-				    	<?php getCategoryFilter(); ?>
-				    </ul>
-				    <!-- Links -->
-
-				  </div>
-				  <!-- Collapsible content -->
-
-				</nav>
-				<!--/.Navbar-->
+		<div class="sidebar-nav my-3" style="background: #6b5523;">
+		    <div class="navbar navbar-default" role="navigation">
+		      <div class="navbar-header">
+		        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse" style="background: #fff;cursor: pointer;border: none;border-radius: 5px;padding: 0.5em 0.75em">
+		          <i class="fas fa-bars" aria-hidden="true"></i>
+		        </button>
+		        <span class="visible-xs navbar-brand">&nbsp;<b class="text-white">Categories</b></span>
+		      </div>
+		      <div class="navbar-collapse collapse sidebar-navbar-collapse">
+		        <ul class="nav navbar-nav">
+		        	<?php getCategoryFilter(); ?>
+		        </ul>
+		      </div><!--/.nav-collapse -->
+		    </div>
 		</div>
 		<div class="row">	
 			<?php getProducts(); ?>
