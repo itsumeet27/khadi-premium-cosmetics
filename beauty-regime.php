@@ -53,7 +53,7 @@
     </div>
     <!--/.Mask-->
     <!-- Section: Products v.3 -->
-<section class="text-center my-5">
+<section class="text-center my-3">
 <div class="container-fluid">
   <div class="sidebar-nav my-3" style="background: #6b5523;">
     <div class="navbar navbar-default" role="navigation">
