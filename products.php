@@ -26,13 +26,31 @@
 	<!--Products Display-->
 	<div class="container-fluid">
 		<h2 class="text-center h2-responsive px-2 py-3" style="font-family: 'Righteous';color: #6b5523;"><b>Products by Khadi Premium Cosmetics</b></h2>
-		<div class="filters row p-3">
-			<div class="col-md-3">
-				<h4 class="h4-responsive text-justify p-2">Categories </h4>
-				<table>
-					<?php getCategoryFilter(); ?>
-				</table>
-			</div>
+		<div class="filters">
+				<!--Navbar-->
+				<nav class="navbar navbar-light light-blue lighten-4 my-3">
+				  <!-- Navbar brand -->
+				  <a class="navbar-brand" href="#">Categories</a>
+
+				  <!-- Collapse button -->
+				  <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
+				    aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i
+				        class="fas fa-bars fa-1x"></i></span></button>
+
+				  <!-- Collapsible content -->
+				  <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+
+				    <!-- Links -->
+				    <ul class='navbar-nav mr-auto'>
+				    	<?php getCategoryFilter(); ?>
+				    </ul>
+				    <!-- Links -->
+
+				  </div>
+				  <!-- Collapsible content -->
+
+				</nav>
+				<!--/.Navbar-->
 		</div>
 		<div class="row">	
 			<?php getProducts(); ?>

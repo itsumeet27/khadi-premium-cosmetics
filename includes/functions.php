@@ -37,7 +37,7 @@
 		while ($row_cat = mysqli_fetch_array($run_cat)) {
 			$category_id = $row_cat['id'];
 			$filter_category = $row_cat['category'];
-			echo "<tr><td class='px-2 py-1'><a href='products.php?filter=$filter_category'>$filter_category</a></td></tr>";		
+			echo "<li class='nav-item'><a class='nav-link' href='products.php?filter=$filter_category'>$filter_category</a></li>";		
 		}
 	}
 
