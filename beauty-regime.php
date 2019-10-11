@@ -62,7 +62,7 @@
         <div class="navbar navbar-default" role="navigation">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse" style="background: #fff;cursor: pointer;border: none;border-radius: 5px;padding: 0.5em 0.75em">
-              <i class="fa fa-reorder" aria-hidden="true"></i>
+              <i class="fas fa-bars" aria-hidden="true"></i>
             </button>
             <span class="visible-xs navbar-brand">&nbsp;<b class="text-white">Categories</b></span>
           </div>

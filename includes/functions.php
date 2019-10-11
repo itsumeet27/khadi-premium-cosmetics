@@ -173,7 +173,7 @@
 
 			global $db;
 
-			$get_pro = "SELECT * FROM products WHERE featured = 0 AND deleted = 0 AND cat_name = 'skin-care' AND beauty_regime = 0";
+			$get_pro = "SELECT * FROM products WHERE featured = 0 AND deleted = 0 AND cat_name = 'Skin Care' AND beauty_regime = 0";
 			$run_pro = mysqli_query($db, $get_pro);
 
 			while ($row_pro = mysqli_fetch_array($run_pro)) {
@@ -232,7 +232,7 @@
 
 			global $db;
 
-			$get_cat_pro = "SELECT * FROM products WHERE categories = '$cat_id' AND featured = 0 AND deleted = 0 AND cat_name = 'skin-care'";
+			$get_cat_pro = "SELECT * FROM products WHERE categories = '$cat_id' AND featured = 0 AND deleted = 0 AND cat_name = 'Skin Care'";
 			$run_cat_pro = mysqli_query($db, $get_cat_pro);
 
 			while ($row_cat_pro = mysqli_fetch_array($run_cat_pro)) {
@@ -309,7 +309,7 @@
 
 			global $db;
 
-			$get_pro = "SELECT * FROM products WHERE featured = 0 AND deleted = 0 AND cat_name = 'hair-care' AND beauty_regime = 0";
+			$get_pro = "SELECT * FROM products WHERE featured = 0 AND deleted = 0 AND cat_name = 'Hair Care' AND beauty_regime = 0";
 			$run_pro = mysqli_query($db, $get_pro);
 
 			while ($row_pro = mysqli_fetch_array($run_pro)) {
@@ -368,7 +368,7 @@
 
 			global $db;
 
-			$get_cat_pro = "SELECT * FROM products WHERE categories = '$cat_id' AND featured = 0 AND deleted = 0 AND cat_name = 'hair-care'";
+			$get_cat_pro = "SELECT * FROM products WHERE categories = '$cat_id' AND featured = 0 AND deleted = 0 AND cat_name = 'Hair Care'";
 			$run_cat_pro = mysqli_query($db, $get_cat_pro);
 
 			while ($row_cat_pro = mysqli_fetch_array($run_cat_pro)) {
@@ -445,7 +445,7 @@
 
 			global $db;
 
-			$get_pro = "SELECT * FROM products WHERE featured = 0 AND deleted = 0 AND cat_name = 'body-care' AND beauty_regime = 0";
+			$get_pro = "SELECT * FROM products WHERE featured = 0 AND deleted = 0 AND cat_name = 'Body Care' AND beauty_regime = 0";
 			$run_pro = mysqli_query($db, $get_pro);
 
 			while ($row_pro = mysqli_fetch_array($run_pro)) {
@@ -504,7 +504,7 @@
 
 			global $db;
 
-			$get_cat_pro = "SELECT * FROM products WHERE categories = '$cat_id' AND featured = 0 AND deleted = 0 AND cat_name = 'body-care'";
+			$get_cat_pro = "SELECT * FROM products WHERE categories = '$cat_id' AND featured = 0 AND deleted = 0 AND cat_name = 'Body Care'";
 			$run_cat_pro = mysqli_query($db, $get_cat_pro);
 
 			while ($row_cat_pro = mysqli_fetch_array($run_cat_pro)) {
