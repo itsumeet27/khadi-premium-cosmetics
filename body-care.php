@@ -43,10 +43,9 @@
       <div class="mask rgba-black-strong">
         <div class="container-fluid d-flex align-items-center justify-content-center h-100">
           <div class="row d-flex justify-content-center text-center">
-            <div class="col-md-10">
-              <a href=""><img src="img/Logo.png" class="img-fluid" style="width: 400px;"></a>
-              <hr class="hr-light">
-              <h4 class="white-text my-4 h1-responsive" style="font-family: 'Cookie', cursive;">Body Care Products</h4>
+            <div class="col-md-10">              
+              <h2 class="text-center text-white h2-responsive px-2 py-3" style="font-family: 'Righteous';line-height: 1.4em"><b>Body Care Products by Khadi Premium Cosmetics</b></h2>
+              <hr class="hr-light" style="width: 150px;border:1px solid #fff;">
             </div>
           </div>
         </div>
@@ -54,8 +53,9 @@
     </div>
     <!--/.Mask-->
     <!-- Section: Products v.3 -->
-<section class="text-center my-5">
+<section class="text-center my-3">
 <div class="container-fluid">
+  
   <div class="row">   
     <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
       <div class="sidebar-nav" style="background: #6b5523;">
