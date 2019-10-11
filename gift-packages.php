@@ -24,9 +24,11 @@
     </div>
 	<!--Products Display-->
 	<div class="container-fluid">
-		<div class="row">	
-			<?php getGiftPackages(); ?>
-		</div>
-	</div>
+    <div class="py-4">
+  		<div class="row">	
+  			<?php getGiftPackages(); ?>
+  		</div>
+  	</div>
+  </div>
 
 <?php include('includes/footer.php');?>
