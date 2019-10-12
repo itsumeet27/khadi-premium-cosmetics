@@ -24,7 +24,7 @@
   <div class="carousel-inner" role="listbox">
     <div class="carousel-item active">
       <div class="view">
-        <img class="d-block w-100" src="images/rose-water-bar-banner.jpeg"
+        <img class="d-block w-100" src="images/rose-water-bar-banner.webp"
           alt="First slide">
         <div class="mask rgba-black-light"></div>
       </div>
@@ -35,7 +35,7 @@
     <div class="carousel-item">
       <!--Mask color-->
       <div class="view">
-        <img class="d-block w-100" src="images/deep-nourishing-shampoo-banner.jpeg"
+        <img class="d-block w-100" src="images/deep-nourishing-shampoo-banner.webp"
           alt="Second slide">
         <div class="mask rgba-black-light"></div>
       </div>
@@ -46,7 +46,7 @@
     <div class="carousel-item">
       <!--Mask color-->
       <div class="view">
-        <img class="d-block w-100" src="images/chamomile-night-cream-banner.jpeg"
+        <img class="d-block w-100" src="images/chamomile-night-cream-banner.webp"
           alt="Third slide">
         <div class="mask rgba-black-light"></div>
       </div>
@@ -76,7 +76,7 @@
   <div class="row p-4" style="background: #fff;">
     <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12">
       <div class="banner-img">
-        <img src="images/hair control and body nourishment.jpg" />
+        <img src="images/hair control and body nourishment.webp" />
       </div>
     </div>
     <div class="col-lg-7 col-md-6 col-sm-12 col-xs-12">
@@ -116,7 +116,7 @@
       <div class="card collection-card z-depth-1-half">
         <!-- Card image -->
         <div class="view zoom">
-          <img src="images/2054.jpg" class="img-fluid"
+          <img src="images/2054.webp" class="img-fluid"
             alt="">
           <div class="stripe dark" style="padding: 1.5rem; background: rgba(0,0,0,0.8); width: 100%; text-align: center; color: #fff; position: absolute; bottom: 0rem;vertical-align: middle;">
             <a style="padding: 0;margin:0">
@@ -138,7 +138,7 @@
       <div class="card collection-card z-depth-1-half">
         <!-- Card image -->
         <div class="view zoom">
-          <img src="images/5511.jpg" class="img-fluid"
+          <img src="images/5511.webp" class="img-fluid"
             alt="">
           <div class="stripe dark" style="padding: 1.5rem; background: rgba(0,0,0,0.8); width: 100%; text-align: center; color: #fff; position: absolute; bottom: 0rem;vertical-align: middle;">
             <a style="padding: 0;margin:0">
@@ -160,7 +160,7 @@
       <div class="card collection-card z-depth-1-half">
         <!-- Card image -->
         <div class="view zoom">
-          <img src="images/6169.jpg" class="img-fluid"
+          <img src="images/6169.webp" class="img-fluid"
             alt="">
           <div class="stripe dark" style="padding: 1.5rem; background: rgba(0,0,0,0.8); width: 100%; text-align: center; color: #fff; position: absolute; bottom: 0rem;vertical-align: middle;">
             <a style="padding: 0;margin:0">
@@ -192,7 +192,7 @@
     <hr class="head-line">
     <div class="row p-4">
       <div class="col-md-6 col-sm-12 col-xs-12 img-container p-4">
-        <img src="images/anti acne treatment.jpg" class="image" />
+        <img src="images/anti acne treatment.webp" class="image" />
         <div class="image-overlay">
           <div class="text-center text">
             <h2 class="p-3">Anti Acne Treatment Package</h2>
@@ -202,7 +202,7 @@
       </div>
 
       <div class="col-md-6 col-sm-12 col-xs-12 img-container p-4">
-        <img src="images/hair and skin protection.jpg" class="image" />
+        <img src="images/hair and skin protection.webp" class="image" />
         <div class="image-overlay">
           <div class="text-center text">
             <h2 class="p-3">Hair and Skin Protection</h2>
