@@ -10,7 +10,7 @@
 		$item_count = 0;
 	}
 ?>
-<div id="about" class="view" style="height: 50%;background: url('img/ban.JPG')no-repeat center center fixed;
+<div id="about" class="view" style="height: 50%;background: url('img/ban.webp')no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -20,9 +20,8 @@
         <div class="container-fluid d-flex align-items-center justify-content-center h-100">
           <div class="row d-flex justify-content-center text-center">
             <div class="col-md-10">
-              <a href=""><img src="img/Logo.png" class="img-fluid" style="width: 400px;"></a>
-              <hr class="hr-light">
-              <h4 class="white-text my-4 h1-responsive" style="font-family: 'Cookie', cursive;">Your Shopping Cart</h4>
+              <h2 class="text-center text-white h2-responsive px-2 py-3" style="font-family: 'Righteous';line-height: 1.4em"><b>Your Shopping Cart</b></h2>
+              <hr class="hr-light" style="width: 150px;border:1px solid #fff;">
             </div>
           </div>
         </div>

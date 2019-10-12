@@ -34,7 +34,7 @@
 </style>
 
   <!--Mask-->
-    <div id="about" class="view" style="height: 50%;background: url('img/hair-body-care.jpg')no-repeat center center fixed;
+    <div id="about" class="view" style="height: 50%;background: url('img/hair-body-care.webp')no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

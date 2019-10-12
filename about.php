@@ -5,7 +5,7 @@
 
   <!-- Quote -->
   <div class="mask rgba-black-light">
-    <div style="padding: 8em 0em;background: url('images/ban2.jpg');background-size: cover;background-attachment: fixed;background-repeat: no-repeat;background-position: center center; color: #fff;">      
+    <div style="padding: 8em 0em;background: url('images/ban2.webp');background-size: cover;background-attachment: fixed;background-repeat: no-repeat;background-position: center center; color: #fff;">      
       <h1 class="title h1-responsive" style="font-family: 'Berkshire Swash', cursive;text-align: center;">
         If Good Skin is Treasure, Nature is the Key!
       </h1>
