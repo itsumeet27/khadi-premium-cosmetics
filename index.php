@@ -213,7 +213,7 @@
     </div>
     <div class="text-center">
       <div class="shop-btn text-center p-3">
-        <a class="btn btn-md btn-white btn-outline-black" href="./products">BROWSE MORE <i class="fa fa-shopping-cart left"></i></a>
+        <a class="btn btn-md btn-white btn-outline-black" href="./products.php">BROWSE MORE <i class="fa fa-shopping-cart left"></i></a>
       </div>
     </div>
   </section>

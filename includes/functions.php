@@ -45,10 +45,11 @@
 		if(isset($_GET['filter'])){
 			$filter = $_GET['filter'];
 			global $db;
-			$get_category = "SELECT * FROM products WHERE cat_name = '$filter' AND deleted = 0 and featured = 0";
+			$get_category = "SELECT p.id,c.category,p.image,p.title,p.weight,p.price,p.short_desc FROM products p INNER JOIN categories c ON p.categories = c.id WHERE cat_name = '$filter' AND deleted = 0 and featured = 0";
 			$run_category = mysqli_query($db, $get_category);
 			while ($row_category = mysqli_fetch_array($run_category)) {
 				$product_id = $row_category['id'];
+				$product_category = $row_category['category'];
 				$product_image = $row_category['image'];
 				$product_title = $row_category['title'];
 				$product_weight = $row_category['weight'];
@@ -65,6 +66,7 @@
 					              	<button onclick='detailsmodal($product_id)' style='background: none;border: none;cursor: pointer'>
 					              		<div class='mask rgba-white-slight'></div>
 					              	</button>
+					              	<h6 class='brown-text pb-2 pt-1 text-center' style='text-transform: uppercase'><b>$product_category</b></h6>
 					            </div>
             					<div class='card-body card-body-cascade text-center'>
                   					<h5>
@@ -98,10 +100,11 @@
 	function getProducts(){
 		if(!isset($_GET['filter'])){
 			global $db;
-			$sql = "SELECT * FROM products WHERE deleted=0 AND beauty_regime = 0 AND featured = 0";
+			$sql = "SELECT p.id,c.category,p.image,p.title,p.weight,p.price,p.short_desc FROM products p INNER JOIN categories c ON p.categories = c.id WHERE deleted=0 AND beauty_regime = 0 AND featured = 0";
   			$products = $db->query($sql);
   			while ($product = mysqli_fetch_array($products)) {
 				$id = $product['id'];
+				$category = $product['category'];
 				$image = $product['image'];
 				$title = $product['title'];
 				$weight = $product['weight'];
@@ -118,6 +121,7 @@
 					              	<button onclick='detailsmodal($id)' style='background: none;border: none;cursor: pointer'>
 					              		<div class='mask rgba-white-slight'></div>
 					              	</button>
+					              	<h6 class='brown-text pb-2 pt-1 text-center' style='text-transform: uppercase'><b>$category</b></h6>
 					            </div>
             					<div class='card-body card-body-cascade text-center'>
                   					<h5>
@@ -173,12 +177,12 @@
 
 			global $db;
 
-			$get_pro = "SELECT * FROM products WHERE featured = 0 AND deleted = 0 AND cat_name = 'Skin Care' AND beauty_regime = 0";
+			$get_pro = "SELECT p.id,c.category,p.image,p.title,p.weight,p.price,p.short_desc FROM products p INNER JOIN categories c ON p.categories = c.id WHERE featured = 0 AND deleted = 0 AND cat_name = 'Skin Care' AND beauty_regime = 0";
 			$run_pro = mysqli_query($db, $get_pro);
 
 			while ($row_pro = mysqli_fetch_array($run_pro)) {
 					$pro_id = $row_pro['id'];
-					$pro_cat = $row_pro['categories'];
+					$pro_cat = $row_pro['category'];
 					$pro_image = $row_pro['image'];
 					$pro_title = $row_pro['title'];
 					$pro_weight = $row_pro['weight'];
@@ -195,6 +199,7 @@
 					              	<button onclick='detailsmodal($pro_id)' style='background: none;border: none;cursor: pointer'>
 					              		<div class='mask rgba-white-slight'></div>
 					              	</button>
+					              	<h6 class='brown-text pb-2 pt-1 text-center' style='text-transform: uppercase'><b>$pro_cat</b></h6>
 					            </div>
             					<div class='card-body card-body-cascade text-center'>
                   					<h5>
@@ -232,12 +237,12 @@
 
 			global $db;
 
-			$get_cat_pro = "SELECT * FROM products WHERE categories = '$cat_id' AND featured = 0 AND deleted = 0 AND cat_name = 'Skin Care'";
+			$get_cat_pro = "SELECT p.id,c.category,p.image,p.title,p.weight,p.price,p.short_desc FROM products p INNER JOIN categories c ON p.categories = c.id WHERE categories = '$cat_id' AND featured = 0 AND deleted = 0 AND cat_name = 'Skin Care'";
 			$run_cat_pro = mysqli_query($db, $get_cat_pro);
 
 			while ($row_cat_pro = mysqli_fetch_array($run_cat_pro)) {
 					$pro_id = $row_cat_pro['id'];
-					$pro_cat = $row_cat_pro['categories'];
+					$pro_cat = $row_cat_pro['category'];
 					$pro_image = $row_cat_pro['image'];
 					$pro_title = $row_cat_pro['title'];
 					$pro_weight = $row_cat_pro['weight'];
@@ -254,6 +259,7 @@
 					              	<button onclick='detailsmodal($pro_id)' style='background: none;border: none;cursor: pointer'>
 					              		<div class='mask rgba-white-slight'></div>
 					              	</button>
+					              	<h6 class='brown-text pb-2 pt-1 text-center' style='text-transform: uppercase'><b>$pro_cat</b></h6>
 					            </div>
             					<div class='card-body card-body-cascade text-center'>
                   					<h5>
@@ -309,12 +315,12 @@
 
 			global $db;
 
-			$get_pro = "SELECT * FROM products WHERE featured = 0 AND deleted = 0 AND cat_name = 'Hair Care' AND beauty_regime = 0";
+			$get_pro = "SELECT p.id,c.category,p.image,p.title,p.weight,p.price,p.short_desc FROM products p INNER JOIN categories c ON p.categories = c.id WHERE featured = 0 AND deleted = 0 AND cat_name = 'Hair Care' AND beauty_regime = 0";
 			$run_pro = mysqli_query($db, $get_pro);
 
 			while ($row_pro = mysqli_fetch_array($run_pro)) {
 					$pro_id = $row_pro['id'];
-					$pro_cat = $row_pro['categories'];
+					$pro_cat = $row_pro['category'];
 					$pro_image = $row_pro['image'];
 					$pro_title = $row_pro['title'];
 					$pro_weight = $row_pro['weight'];
@@ -331,6 +337,7 @@
 					              	<button onclick='detailsmodal($pro_id)' style='background: none;border: none;cursor: pointer'>
 					              		<div class='mask rgba-white-slight'></div>
 					              	</button>
+					              	<h6 class='brown-text pb-2 pt-1 text-center' style='text-transform: uppercase'><b>$pro_cat</b></h6>
 					            </div>
             					<div class='card-body card-body-cascade text-center'>
                   					<h5>
@@ -368,12 +375,12 @@
 
 			global $db;
 
-			$get_cat_pro = "SELECT * FROM products WHERE categories = '$cat_id' AND featured = 0 AND deleted = 0 AND cat_name = 'Hair Care'";
+			$get_cat_pro = "SELECT p.id,c.category,p.image,p.title,p.weight,p.price,p.short_desc FROM products p INNER JOIN categories c ON p.categories = c.id WHERE categories = '$cat_id' AND featured = 0 AND deleted = 0 AND cat_name = 'Hair Care'";
 			$run_cat_pro = mysqli_query($db, $get_cat_pro);
 
 			while ($row_cat_pro = mysqli_fetch_array($run_cat_pro)) {
 					$pro_id = $row_cat_pro['id'];
-					$pro_cat = $row_cat_pro['categories'];
+					$pro_cat = $row_cat_pro['category'];
 					$pro_image = $row_cat_pro['image'];
 					$pro_title = $row_cat_pro['title'];
 					$pro_weight = $row_cat_pro['weight'];
@@ -390,6 +397,7 @@
 					              	<button onclick='detailsmodal($pro_id)' style='background: none;border: none;cursor: pointer'>
 					              		<div class='mask rgba-white-slight'></div>
 					              	</button>
+					              	<h6 class='brown-text pb-2 pt-1 text-center' style='text-transform: uppercase'><b>$pro_cat</b></h6>
 					            </div>
             					<div class='card-body card-body-cascade text-center'>
                   					<h5>
@@ -445,12 +453,12 @@
 
 			global $db;
 
-			$get_pro = "SELECT * FROM products WHERE featured = 0 AND deleted = 0 AND cat_name = 'Body Care' AND beauty_regime = 0";
+			$get_pro = "SELECT p.id,c.category,p.image,p.title,p.weight,p.price,p.short_desc FROM products p INNER JOIN categories c ON p.categories = c.id WHERE featured = 0 AND deleted = 0 AND cat_name = 'Body Care' AND beauty_regime = 0";
 			$run_pro = mysqli_query($db, $get_pro);
 
 			while ($row_pro = mysqli_fetch_array($run_pro)) {
 					$pro_id = $row_pro['id'];
-					$pro_cat = $row_pro['categories'];
+					$pro_cat = $row_pro['category'];
 					$pro_image = $row_pro['image'];
 					$pro_title = $row_pro['title'];
 					$pro_weight = $row_pro['weight'];
@@ -467,6 +475,7 @@
 					              	<button onclick='detailsmodal($pro_id)' style='background: none;border: none;cursor: pointer'>
 					              		<div class='mask rgba-white-slight'></div>
 					              	</button>
+					              	<h6 class='brown-text pb-2 pt-1 text-center' style='text-transform: uppercase'><b>$pro_cat</b></h6>
 					            </div>
             					<div class='card-body card-body-cascade text-center'>
                   					<h5>
@@ -504,12 +513,12 @@
 
 			global $db;
 
-			$get_cat_pro = "SELECT * FROM products WHERE categories = '$cat_id' AND featured = 0 AND deleted = 0 AND cat_name = 'Body Care'";
+			$get_cat_pro = "SELECT p.id,c.category,p.image,p.title,p.weight,p.price,p.short_desc FROM products p INNER JOIN categories c ON p.categories = c.id WHERE categories = '$cat_id' AND featured = 0 AND deleted = 0 AND cat_name = 'Body Care'";
 			$run_cat_pro = mysqli_query($db, $get_cat_pro);
 
 			while ($row_cat_pro = mysqli_fetch_array($run_cat_pro)) {
 					$pro_id = $row_cat_pro['id'];
-					$pro_cat = $row_cat_pro['categories'];
+					$pro_cat = $row_cat_pro['category'];
 					$pro_image = $row_cat_pro['image'];
 					$pro_title = $row_cat_pro['title'];
 					$pro_weight = $row_cat_pro['weight'];
@@ -526,6 +535,7 @@
 					              	<button onclick='detailsmodal($pro_id)' style='background: none;border: none;cursor: pointer'>
 					              		<div class='mask rgba-white-slight'></div>
 					              	</button>
+					              	<h6 class='brown-text pb-2 pt-1 text-center' style='text-transform: uppercase'><b>$pro_cat</b></h6>
 					            </div>
             					<div class='card-body card-body-cascade text-center'>
                   					<h5>
@@ -603,7 +613,7 @@
 					              	<button onclick='detailsmodal($pro_id)' style='background: none;border: none;cursor: pointer'>
 					              		<div class='mask rgba-white-slight'></div>
 									  </button>
-									  <h6 class='brown-text pb-2 pt-1' style='text-transform: uppercase'><b>$pro_cat</b></h6>
+									  <h6 class='brown-text pb-2 pt-1 text-center' style='text-transform: uppercase'><b>$pro_cat</b></h6>
 					            </div>
             					<div class='card-body card-body-cascade text-center'>
                   					<h5>
@@ -663,7 +673,7 @@
 					              	<button onclick='detailsmodal($pro_id)' style='background: none;border: none;cursor: pointer'>
 					              		<div class='mask rgba-white-slight'></div>
 									  </button>
-									  <h6 class='brown-text pb-2 pt-1' style='text-transform: uppercase'><b>$pro_cat</b></h6>
+									  <h6 class='brown-text pb-2 pt-1 text-center' style='text-transform: uppercase'><b>$pro_cat</b></h6>
 					            </div>
             					<div class='card-body card-body-cascade text-center'>
                   					<h5>
