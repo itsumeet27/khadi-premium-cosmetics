@@ -92,7 +92,7 @@
         </p>
       </div>
       <div class="shop-btn text-center p-3">
-        <a class="btn btn-white btn-outline-black" href="#">PURCHASE NOW <i class="fa fa-shopping-cart left"></i></a>
+        <a class="btn btn-md btn-white btn-outline-black" href="#">PURCHASE NOW <i class="fa fa-shopping-cart left"></i></a>
       </div>
     </div>
   </div>
@@ -192,28 +192,28 @@
     <hr class="head-line">
     <div class="row p-4">
       <div class="col-md-6 col-sm-12 col-xs-12 img-container p-4">
-        <img src="images/anti acne treatment.webp" class="image" />
+        <img src="images/morning-ritual.jpeg" class="image" />
         <div class="image-overlay">
           <div class="text-center text">
-            <h2 class="p-3">Anti Acne Treatment Package</h2>
-            <a href="#" class="btn btn-white">Purcahse Now <i class="fa fa-shopping-cart left"></i></a>
+            <h3 class="p-3 h3-responsive">Morning Ritual</h3>
+            <a href="./products.php" class="btn btn-md btn-white">Purcahse Now <i class="fa fa-shopping-cart left"></i></a>
           </div>
         </div>
       </div>
 
       <div class="col-md-6 col-sm-12 col-xs-12 img-container p-4">
-        <img src="images/hair and skin protection.webp" class="image" />
+        <img src="images/Clean & Pure.jpeg" class="image" />
         <div class="image-overlay">
           <div class="text-center text">
-            <h2 class="p-3">Hair and Skin Protection</h2>
-            <a href="#" class="btn btn-white">Purcahse Now <i class="fa fa-shopping-cart left"></i></a>
+            <h3 class="p-3 h3-responsive">Clean & Pure</h3>
+            <a href="./products.php" class="btn btn-md btn-white">Purcahse Now <i class="fa fa-shopping-cart left"></i></a>
           </div>
         </div>
       </div>
     </div>
     <div class="text-center">
       <div class="shop-btn text-center p-3">
-        <a class="btn btn-white btn-outline-black" href="#">BROWSE MORE <i class="fa fa-shopping-cart left"></i></a>
+        <a class="btn btn-md btn-white btn-outline-black" href="./products">BROWSE MORE <i class="fa fa-shopping-cart left"></i></a>
       </div>
     </div>
   </section>
