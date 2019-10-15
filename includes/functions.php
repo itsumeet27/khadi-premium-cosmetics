@@ -581,12 +581,12 @@
 
 			global $db;
 
-			$get_pro = "SELECT * FROM products WHERE featured = 0 AND deleted = 0 AND beauty_regime = 1";
+			$get_pro = "SELECT p.id,c.category,p.image,p.title,p.weight,p.price,p.short_desc FROM products p INNER JOIN categories c ON p.categories = c.id WHERE featured = 0 AND deleted = 0 AND beauty_regime = 1";
 			$run_pro = mysqli_query($db, $get_pro);
 
 			while ($row_pro = mysqli_fetch_array($run_pro)) {
 					$pro_id = $row_pro['id'];
-					$pro_cat = $row_pro['categories'];
+					$pro_cat = $row_pro['category'];
 					$pro_image = $row_pro['image'];
 					$pro_title = $row_pro['title'];
 					$pro_weight = $row_pro['weight'];
@@ -602,7 +602,8 @@
 					            	<img src='$photos[0]' class='card-img-top img-fluid' alt='$pro_title'>
 					              	<button onclick='detailsmodal($pro_id)' style='background: none;border: none;cursor: pointer'>
 					              		<div class='mask rgba-white-slight'></div>
-					              	</button>
+									  </button>
+									  <h6 class='brown-text pb-2 pt-1' style='text-transform: uppercase'><b>$pro_cat</b></h6>
 					            </div>
             					<div class='card-body card-body-cascade text-center'>
                   					<h5>
@@ -640,12 +641,12 @@
 
 			global $db;
 
-			$get_cat_pro = "SELECT * FROM products WHERE categories = '$cat_id' AND featured = 0 AND deleted = 0 AND beauty_regime = 1";
+			$get_cat_pro = "SELECT p.id,c.category,p.image,p.title,p.weight,p.price,p.short_desc FROM products p INNER JOIN categories c ON p.categories = c.id WHERE categories = '$cat_id' AND featured = 0 AND deleted = 0 AND beauty_regime = 1";
 			$run_cat_pro = mysqli_query($db, $get_cat_pro);
 
 			while ($row_cat_pro = mysqli_fetch_array($run_cat_pro)) {
 					$pro_id = $row_cat_pro['id'];
-					$pro_cat = $row_cat_pro['categories'];
+					$pro_cat = $row_cat_pro['category'];
 					$pro_image = $row_cat_pro['image'];
 					$pro_title = $row_cat_pro['title'];
 					$pro_weight = $row_cat_pro['weight'];
@@ -661,7 +662,8 @@
 					            	<img src='$photos[0]' class='card-img-top img-fluid' alt='$pro_title'>
 					              	<button onclick='detailsmodal($pro_id)' style='background: none;border: none;cursor: pointer'>
 					              		<div class='mask rgba-white-slight'></div>
-					              	</button>
+									  </button>
+									  <h6 class='brown-text pb-2 pt-1' style='text-transform: uppercase'><b>$pro_cat</b></h6>
 					            </div>
             					<div class='card-body card-body-cascade text-center'>
                   					<h5>
