@@ -1,4 +1,22 @@
+<?php include('includes/header.php');?>
 
+  <div id="about" class="view" style="height: 50%;background: url('img/ban.webp')no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 20em 2em">
+    <div class="mask rgba-black-strong">
+      <div class="container-fluid d-flex align-items-center justify-content-center h-100">
+        <div class="row d-flex justify-content-center text-center">
+          <div class="col-md-10">
+            <h2 class="text-center text-white h2-responsive px-2 py-3" style="font-family: 'Righteous';line-height: 1.4em"><b>Contact Us</b></h2>
+            <hr class="hr-light" style="width: 150px;border:1px solid #fff;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 <!--Section: Contact-->
 <section style="padding: 4em 0em;background: rgba(205, 220, 57, 0.1);" id="contact">
 
@@ -35,7 +53,7 @@
               <label for="form8">Your message</label>
             </div>
             <div class="text-center mt-4">
-              <button class="btn" type="submit" name="submit" style="background: #826931">Send <i class="fa fa-paper-plane-o ml-1"></i></button>
+              <button class="btn btn-md text-white" type="submit" name="submit" style="background: #826931">Send</button>
             </div>
           </form>
           <!-- Form contact -->
@@ -75,8 +93,7 @@
           <!--Grid column-->
 
         </div>
-        <!--Grid row-->
-        <div id="map-container" class="z-depth-1-half map-container mb-5" style="height: 400px"></div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.1870604723904!2d72.82948221485236!3d19.143287387049345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b7bc94eebfc1%3A0x9810a53e4a764df2!2sKhadi%20Premium%20Cosmetics!5e0!3m2!1sen!2sin!4v1571171875105!5m2!1sen!2sin" width="800" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
 
       </div>
       <!--Grid column-->
@@ -88,3 +105,5 @@
 
 </section>
 <!--Section: Contact-->
+
+<?php include 'includes/footer.php';?>
