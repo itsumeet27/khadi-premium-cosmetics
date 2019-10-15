@@ -21,14 +21,7 @@
 <section style="padding: 4em 0em;background: rgba(205, 220, 57, 0.1);" id="contact">
 
   <section class="container-fluid">
-
-    <!-- Heading -->
-    <h2 class="mb-5 font-weight-bold text-center py-3">Contact us</h2>
-
-    <!--Grid row-->
     <div class="row">
-
-      <!--Grid column-->
       <div class="col-lg-5 col-md-12">
         <div class="card">
           <div class="card-header white-text text-center py-3" style="background: #ccad67;position: absolute;width: 90%;margin-left: 5%;box-shadow: 0px 3px 7px 0px rgba(0,0,0,0.5);margin-top: -2em; border-radius: 5px;">
@@ -59,51 +52,22 @@
           <!-- Form contact -->
         </div>
       </div>
-      <!--Grid column-->
-
-      <!--Grid column-->
       <div class="col-lg-7 col-md-12">
-
-        <!--Google map-->
-        <!--Grid row-->
         <div class="row text-center">
-
-          <!--Grid column-->
           <div class="col-lg-4 col-md-12 mb-3">
-
             <p><i class="fa fa-map fa-1x mr-2 grey-text"></i>Adarsh Nagar, Mumbai-400102</p>
-
           </div>
-          <!--Grid column-->
-
-          <!--Grid column-->
           <div class="col-lg-4 col-md-6 mb-3">
-
             <p><i class="fa fa-building fa-1x mr-2 grey-text"></i>Mon - Sat, 11:00-18:00</p>
-
           </div>
-          <!--Grid column-->
-
-          <!--Grid column-->
           <div class="col-lg-4 col-md-6 mb-3">
-
             <p><i class="fa fa-phone fa-1x mr-2 grey-text"></i>+ 91 9619531115</p>
-
           </div>
-          <!--Grid column-->
-
         </div>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.1870604723904!2d72.82948221485236!3d19.143287387049345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b7bc94eebfc1%3A0x9810a53e4a764df2!2sKhadi%20Premium%20Cosmetics!5e0!3m2!1sen!2sin!4v1571171875105!5m2!1sen!2sin" width="800" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-
       </div>
-      <!--Grid column-->
-
     </div>
-    <!--Grid row-->
-
   </section>
-
 </section>
-<!--Section: Contact-->
 
 <?php include 'includes/footer.php';?>
