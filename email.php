@@ -1,37 +1,21 @@
-<?php
-//if "email" variable is filled out, send email
-  if (isset($_REQUEST['email']))  {
-  
-  //Email information
-  $admin_email = "sksharma.sharma87@gmail.com";
-  $email = $_REQUEST['email'];
-  $subject = $_REQUEST['subject'];
-  $message = $_REQUEST['message'];
-  
-  //send email
-  mail($admin_email, "$subject", $message, "From:" . $email);
-  
-  //Email response
-  echo "Thank you for contacting us!";
-  }
-  
-  //if "email" variable is not filled out, display the form
-  else  {
-?>
 
- <form method="post">
+<?php include('includes/header.php');?>
 
-  Email: <input name="email" type="text" />
+  <div class="text-center container-fluid">
+    <?php
+      $from = "sksksharma0@gmail.com";
+      $to = "sksharma.sharma87@gmail.com";
+      $subject = "Email trial";
+      $body = "You have a mail, please check!";
+      $headers = "From: $from";
 
-  Subject: <input name="subject" type="text" />
+      if(mail($to,$subject,$body,$headers)){
+        echo "<h2 class='text-success p-3 h2-responsive'>Email sent successfully!</h2>";
+      }else{
+        echo "<h2 class='text-danger p-3 h2-responsive'>Failure in sending email!</h2>";
+      }
+    ?>
+    
+  </div>
 
-  Message:
-
-  <textarea name="message" rows="15" cols="40"></textarea>
-
-  <input type="submit" value="Submit" />
-  </form>
-  
-<?php
-  }
-?>
+<?php include('includes/footer.php');?>
