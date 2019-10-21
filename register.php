@@ -77,7 +77,7 @@
 				            </div>
 						</div>
 						<div class="text-center mt-4">
-			              	<button class="btn" type="submit" name="submit" style="background: #607d8b">Submit <i class="fa fa-paper-plane-o ml-1"></i></button>
+			              	<button class="btn btn-md text-white" type="submit" name="submit" style="background: #607d8b">Submit <i class="fa fa-paper-plane-o ml-1"></i></button>
 			            </div>					
 					</div>
 				</form>
@@ -103,13 +103,14 @@
 		$insertCus = "INSERT INTO customers (ip,fullname,email,password,address1,address2,city,state,zipcode,phone,country) VALUES ('$ip','$fullname','$email','$password','$address1','$address2','$city','$state','$zipcode','$phone','$country')";
 		$db->query($insertCus);
 
-		/*
-			$from = "sksksharma0@gmail.com";
-			$to = $email;
-			$subject = "Sucessful Registration";
-			$body = "Hello $fullname! Welcome to our Khadi Premium Cosmetics family.";
-			$headers = "From: $from";
-		*/
+		//The code below does not work on localhost but does work on your domain server
+		$from = "itsumeet@gmail.com";
+		$to = $email;
+		$subject = "Sucessful Registration";
+		$body = "Hello $fullname! Welcome to our Khadi Premium Cosmetics family.";
+		$headers = "From: $from";
+
+		mail($to,$subject,$body,$headers);
 
 		$sel_cart = "SELECT * FROM cart WHERE ip_add = '$ip'";
 		$run_cart = $db->query($sel_cart);
