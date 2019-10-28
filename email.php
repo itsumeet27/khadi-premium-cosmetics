@@ -16,7 +16,6 @@
       $subject = $subject;
       $body = "Hello $name! Thanks for the enquiry. We will get back to you soon";
       $headers = "From: $from";
-      mail($to,$subject,$body,$headers);
             
 
       if(mail($to,$subject,$body,$headers)){

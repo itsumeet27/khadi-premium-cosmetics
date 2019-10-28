@@ -28,7 +28,7 @@
             <h4 class="h4-responsive text-center">Leave a message</h4>
           </div>
           <!-- Form contact -->
-          <form class="p-5 grey-text" method="post" action="contact.php">
+          <form class="p-5 grey-text" method="post" action="email.php">
             <div class="md-form form-sm"> <i class="fa fa-user prefix"></i>
               <input type="text" id="form3" class="form-control form-control-sm" name="name">
               <label for="form3">Your name</label>
