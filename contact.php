@@ -49,25 +49,6 @@
               <button class="btn btn-md text-white" type="submit" name="submit" style="background: #826931">Send</button>
             </div>
           </form>
-          <!-- Form contact -->
-          <?php
-
-            if(isset($_POST['submit'])){
-              $ip = getIp();
-              $name = sanitize($_POST['name']);
-              $email = sanitize($_POST['email']);
-              $subject = sanitize($_POST['subject']);
-              $message = sanitize($_POST['message']);
-            }
-            //The code below does not work on localhost but does work on your domain server
-            $from = "itsumeet@gmail.com";
-            $to = $email;
-            $subject = $subject;
-            $body = "Hello $name! Thanks for the enquiry. We will get back to you soon";
-            $headers = "From: $from";
-            mail($to,$subject,$body,$headers);
-            
-          ?>
         </div>
       </div>
       <div class="col-lg-7 col-md-12">
